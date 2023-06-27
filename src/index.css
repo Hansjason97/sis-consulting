@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+  html{
+      scroll-behavior: smooth;
+    }
+    ::selection{
+      @apply bg-primary text-secondaryBlack;
+    }
+    ::-webkit-scrollbar{
+      @apply w-1;
+    }
+    ::-webkit-scrollbar-track{
+      @apply bg-transparent h-fit;
+    }
+    ::-webkit-scrollbar-thumb{
+      @apply bg-primary;
+    }
+    body{
+      @apply bg-secondaryBlack text-slate-400 text-sm lg:text-base bg-cover bg-repeat-y;
+      background-image: url('./assets/42.svg');
+    }
+    h1, h2, h3, h4{
+      @apply tracking-tight font-semibold capitalize;
+      line-height: 120% !important;
+    }
+    h1{
+      @apply text-3xl md:text-4xl lg:text-6xl font-bold text-slate-100;
+    }
+    h2{
+      @apply text-2xl md:text-3xl lg:text-5xl text-slate-100;
+    }
+    h4{
+      @apply text-xl text-slate-100;
+    }
+    button{
+      @apply px-6 py-2 w-fit bg-secondaryLight rounded-sm text-slate-100 font-semibold capitalize
+      relative top-0 transition-all duration-100 ease-linear hover:bg-secondary active:bg-secondary active:top-1;
+    }
+}
+
+@layer components{
+  .box{
+    @apply px-2 py-12 lg:px-0 max-w-7xl mx-auto flex flex-col;
+  }
+  .subHeader {
+    @apply mb-4 text-primary tracking-[.3rem] uppercase text-xs flex justify-center items-center
+    before:content-[''] before:w-10 before:h-[1px] before:bg-primary before:flex before:mx-1
+    after:content-[''] after:w-10 after:h-[1px] after:bg-primary after:flex after:mx-1;
+  }
+}
