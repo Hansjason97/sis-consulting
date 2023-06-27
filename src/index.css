@@ -43,11 +43,20 @@
 
 @layer components{
   .box{
-    @apply px-2 py-12 lg:px-0 max-w-7xl mx-auto flex flex-col;
+    @apply px-2 py-12 xl:py-16 xl:px-0 max-w-7xl mx-auto flex flex-col;
   }
   .subHeader {
-    @apply mb-4 text-primary tracking-[.3rem] uppercase text-xs flex justify-center items-center
+    @apply mb-4 text-primary tracking-[.3rem] uppercase text-xs flex items-center
     before:content-[''] before:w-10 before:h-[1px] before:bg-primary before:flex before:mx-1
     after:content-[''] after:w-10 after:h-[1px] after:bg-primary after:flex after:mx-1;
+  }
+  .boxGrid{
+    @apply grid grid-cols-1 md:grid-cols-2 px-2 py-12 xl:py-16 xl:px-0 max-w-7xl mx-auto gap-4;
+  }
+  .highlight{
+    @apply font-semibold text-primary;
+  }
+  .gridLeft{
+    @apply mx-auto text-center md:mx-0 md:text-left;
   }
 }

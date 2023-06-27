@@ -4,6 +4,13 @@ import alarm from '../assets/alarm.jpg'
 import fireAlarm from '../assets/fire-alarm.jpg'
 import phone from '../assets/phone.jpg'
 import rfid from '../assets/rfid.jpg'
+import logo1 from '../assets/images/afriteclogo.png'
+import logo2 from '../assets/images/bkjlogo.png'
+import logo3 from '../assets/images/itgLogo.png'
+import logo4 from '../assets/images/Schlumberger.png'
+import logo5 from '../assets/images/businesstrade.png'
+import logo6 from '../assets/images/vigi.png'
+import logo7 from '../assets/images/logosli.png'
 
 
 export const services = [
@@ -42,5 +49,36 @@ export const services = [
         description: "Système d'identification par Fréquence Radio",
         link: "#",
         image: rfid
+    },
+];
+
+export const partners = [ 
+    {
+        url: logo1,
+        alt: 'Afritec'
+    },
+    {
+        url: logo2,
+        alt: 'BKJ'
+    },
+    {
+        url: logo3,
+        alt: 'ITGStore'
+    },
+    {
+        url: logo4,
+        alt: 'Schlumberger'
+    },
+    {
+        url: logo5,
+        alt: 'BusinessTrade'
+    },
+    {
+        url: logo6,
+        alt: 'VigiSecurity'
+    },
+    {
+        url: logo7,
+        alt: 'SLI'
     },
 ];
