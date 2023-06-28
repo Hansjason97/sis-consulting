@@ -5,6 +5,7 @@
 @layer base{
   html{
       scroll-behavior: smooth;
+      @apply scroll-pt-10;
     }
     ::selection{
       @apply bg-primary text-secondaryBlack;
@@ -78,9 +79,27 @@
     @apply border-t border-secondary/20;
   }
   .menuDesktop{
-    @apply flex gap-10;
+    @apply hidden md:flex gap-10;
   }
   .menuDesktop > a {
     @apply capitalize text-sm tracking-wider hover:text-primary;
+  }
+  .menuIcon{
+    @apply w-8 cursor-pointer block md:hidden;
+  }
+  .menuIcon::before, .menuIcon::after, .menuIcon div{
+    @apply bg-primary content-[""] block h-[2px] my-1 transition-all duration-500;
+  }
+  .menuIconActive::after{
+    @apply translate-y-[-6px] rotate-[-135deg];
+  }
+  .menuIconActive:before{
+    @apply translate-y-[6px] rotate-[135deg];
+  }
+  .menuIconActive div{
+    @apply scale-0;
+  }
+  .menu-mobile-link{
+    @apply text-slate-100 capitalize;
   }
 }
