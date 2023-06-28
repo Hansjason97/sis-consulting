@@ -51,12 +51,36 @@
     after:content-[''] after:w-10 after:h-[1px] after:bg-primary after:flex after:mx-1;
   }
   .boxGrid{
-    @apply grid grid-cols-1 md:grid-cols-2 px-2 py-12 xl:py-16 xl:px-0 max-w-7xl mx-auto gap-4;
+    @apply grid grid-cols-1 md:grid-cols-2 px-2 py-12 xl:py-16 xl:px-0 max-w-7xl mx-auto gap-8;
   }
   .highlight{
     @apply font-semibold text-primary;
   }
   .gridLeft{
     @apply mx-auto text-center md:mx-0 md:text-left;
+  }
+  .elementInfo{
+    @apply  px-16 py-6 md:py-0 flex flex-col justify-center text-center gap-2 w-full;
+  }
+  .infoIcons{
+    @apply max-w-6xl py-0 md:py-12 w-full md:w-fit rounded-xl bg-secondary/90 grid grid-cols-1 md:grid-cols-3 mx-auto shadow-none md:shadow-xl;
+  }
+  .infoIcons > *{
+    @apply border-b-[1px] md:border-r-[1px] md:border-b-0 border-secondaryDark md:border-secondaryLight;
+  }
+  .infoIcons :last-child{
+    @apply border-0;
+  }
+  .footerBloc{
+    @apply flex flex-col justify-center sm:justify-start gap-3 mx-auto text-center sm:text-left px-5 py-5;
+  }
+  .footer{
+    @apply border-t border-secondary/20;
+  }
+  .menuDesktop{
+    @apply flex gap-10;
+  }
+  .menuDesktop > a {
+    @apply capitalize text-sm tracking-wider hover:text-primary;
   }
 }

@@ -1,8 +1,11 @@
 import React from 'react'
 import { services, partners } from '../data/data'
 import Folder from '../components/Folder'
-import image01 from '../assets/images/image01.webp'
+import image01 from '../assets/images/team-types.webp'
 import Carousel from '../components/Carousel'
+import {HiUserGroup} from 'react-icons/hi'
+import {MdWork} from 'react-icons/md'
+import {FaUserTie} from 'react-icons/fa'
 
 function Home() {
   return (
@@ -18,8 +21,28 @@ function Home() {
             IP et analogique, détection incendie, alarme anti-intrusion, interphones et solutions RFID.
           </p>
           <button className='mx-auto'>
-            nous contacter
+            Demander un devis
           </button>
+        </div>
+      </section>
+      {/**Details info ##########################################"" */}
+      <section className='relative translate-y-0 md:translate-y-[-20%] transition-all duration-100 ease-in'>
+        <div className='infoIcons'>
+          <div className='elementInfo'>
+            <HiUserGroup className='w-8 h-8 text-slate-100 mx-auto' />
+            <p className='text-primary font-bold text-xl'>65</p>
+            <p>Clients heureux</p>
+          </div>
+          <div className='elementInfo'>
+            <MdWork className='w-8 h-8 text-slate-100 mx-auto' />
+            <p className='text-primary font-bold text-xl'>127</p>
+            <p>Projets terminés</p>
+          </div>
+          <div className='elementInfo'>
+            <FaUserTie className='w-8 h-8 text-slate-100 mx-auto' />
+            <p className='text-primary font-bold text-xl'>12</p>
+            <p>Experts de la sécurité</p>
+          </div>
         </div>
       </section>
       <section className='box' id="services">
@@ -45,11 +68,11 @@ function Home() {
             Sécurité électronique & intégration de solutions
             </h2>
             <p className='my-5'>
-              <span className='highlight'>SIS-Consulting</span>, est une entreprise Privée de droit camerounais, qui a vu le jour en 2020.
+              <span className='highlight'>SIS-Consulting</span>, est une société spécialisée en sécurité domestique et industrielle qui a vu le jour en 2022.
               En tant qu’entreprise de nouvelle génération avec des idées modernes et une philosophie d’être,
               le meilleur plutôt que le plus grand intégrateur de l’industrie de la sécurité.
-              Nous utilisons de nouvelles solutions basées sur des idées innovantes mettant en avant les meilleurs technologie à offrir.
-                Nous Avons l’Ambition de devenir les leaders de l’industrie de la sécurité électronique et l’intégration des solutions en Afrique.
+              Nous utilisons de nouvelles solutions basées sur des idées innovantes mettant en avant les meilleurs technologies à offrir.
+                Nous avons pour but de devenir un acteur majeur de l’industrie de la sécurité électronique et l’intégration des solutions.
             </p>
           </div>
           <div className='h-80 w-[80%] bg-cover bg-secondaryLight bg-blend-multiply rounded-md mx-auto
@@ -57,7 +80,7 @@ function Home() {
           style={{backgroundImage: `url(${image01})`}}></div>
       </section>
       {/**Partners ################################################ */}
-      <section className='boxGrid'>
+      <section className='boxGrid' id='partners'>
           <div className='px-2'>
             <Carousel carousel={partners} />
           </div>
@@ -73,6 +96,22 @@ function Home() {
             Notre engagement à offrir un service exceptionnel et à dépasser les attentes nous a valu la fidélité et la satisfaction de nos clients.
             </p>
           </div>
+      </section>
+      {/**Contact ##########################################"" */}
+      <section id='contact' className='box'>
+        <p className='subHeader mx-auto'>
+          contact
+        </p>
+        <h2 className='text-center max-w-4xl mx-auto'>
+          Besoin de nos services ?
+        </h2>
+        <p className='my-6 text-center mx-auto max-w-3xl'>
+        Nous sommes déterminés à offrir des solutions de sécurité et de surveillance de qualité supérieure à nos clients. 
+        Contactez-nous dès aujourd'hui pour en savoir plus sur nos services et comment nous pouvons vous aider à protéger votre entreprise.
+        </p>
+        <button className='my-8 mx-auto'>
+          Ecrivez-nous !
+        </button>
       </section>
     </div>
   )
